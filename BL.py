@@ -5,9 +5,11 @@ class BL:
         self.bit = bit
     bit = 8
     operators = {
-        ("0"*(bit-len("1"))+"1"): None
+        
     }
-
+    def add_operator(self, number, func):
+        self.operators[("0"*(bit-len(number))+number)] = func
+        
     def binaryTodecimal(n):
         decimal = 0
         power = 1
